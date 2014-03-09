@@ -111,6 +111,10 @@ function commandDispatch(command, author)
                 }, 10);
             }
             break;
+        case "eta":
+            var minutesToDJ = getETA(username);
+            log("It will be your turn to DJ in ~" + minutesToDJ() + " minutes.");
+        break;
         default:
             console.log(author + " has entered an invalid command.");
             break;
@@ -155,4 +159,14 @@ function getId(username) {
             return users[i].id;
         }
     }
+}
+
+function getETA(username) {
+    var user_id = getId(username);
+
+    
+}
+
+function getPosition(username) {
+    
 }
